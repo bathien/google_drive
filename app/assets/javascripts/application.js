@@ -25,5 +25,7 @@
 //= require bootstrap-3.1.1.min
 //= require jquery.swipebox.min
 //= require jqBootstrapValidation
+//= require jquery.magnific-popup
 //= require jquery.flexisel
+//= require jquery.flexslider
 //= require_tree .
