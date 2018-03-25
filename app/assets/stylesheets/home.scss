@@ -87,7 +87,6 @@ a:focus{
 }
 nav.navbar.navbar-default {
     background: none;
-    padding:1em 0 0 0;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color:#33cc99;
@@ -395,6 +394,17 @@ p.logo_w3l_agile_caption {
   background: asset-url("banner3.jpg") no-repeat 0px 0px;
     background-size: cover;
   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  min-height:700px;
+}
+
+.w3layouts-banner-top4{
+  background: asset-url("banner4.gif") no-repeat 0px 0px;
+    background-size: contain;
+    background-position: center;
+  -webkit-background-size: contain;
   -moz-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
