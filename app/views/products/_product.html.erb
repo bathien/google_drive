@@ -1,0 +1,15 @@
+<div class="item col-xs-4 col-lg-4 list-group-item">
+  <div class="thumbnail">
+     <%= image_tag product.images[0].name, class: "group list-group-image" %>
+    <div class="caption">
+      <h4 class="group inner list-group-item-heading">
+        <%= product.name %>
+      </h4>
+      <% eval(product.description).each do |key, value| %>
+        <p class="group inner list-group-item-text">
+          <%=  "#{key.to_s.gsub("_", " ").capitalize}: #{value.to_s}" %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

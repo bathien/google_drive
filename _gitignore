@@ -4,16 +4,19 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore bundler config.
+.rspec
 /.bundle
-
-# Ignore all logfiles and tempfiles.
+/vendor/bundle
+/db/*.sqlite3
+/db/*.sqlite3-journal
 /log/*
 /tmp/*
-!/log/.keep
-!/tmp/.keep
-
-/node_modules
-/yarn-error.log
-
-.byebug_history
+/public/assets
+!/public/assets/*json
+/dump.rdb
+config/database.yml
+config/application.yml
+/cert/*
+sitemap.xml*
+erd.pdf
+.docker-sync

@@ -2,10 +2,10 @@
 	<div class="container">
 		<div class="header-left">
 			<div class="agileinfo-phone">
-				<p><i class="fa fa-volume-control-phone" aria-hidden="true"></i> telephone</p>
+				<p><a href="tel:0909597667" style="color: white;"><i class="fa fa-volume-control-phone" aria-hidden="true"> 0909597667</i></a></p>
 			</div>
 			<div class="agileinfo-phone agileinfo-map">
-				<p><i class="fa fa-map-marker" aria-hidden="true"></i> Address</p>
+				<p><a href="mailto:httvan@vavimex.com" style="color: white;"><i class="fa fa-envelope" aria-hidden="true"></i> httvan@vavimex.com</a></p>
 			</div>
 			<div class="search-grid">
 				<form action="#" method="post">
@@ -23,14 +23,14 @@
 		<nav class="navbar navbar-default">
 			<div class="navbar-header navbar-left">
 			<%= image_tag "logo_vavimex.png", class: "img-responsive", alt: "Vavimex" %>
-			
+
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				
+
 			</div>
 			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 				<nav class="menu menu--iris">
@@ -40,11 +40,7 @@
 						<li class="dropdown menu__item">
 							<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown">Gallery<b class="caret"></b></a>
 							<ul class="dropdown-menu agile_short_dropdown">
-								<li><a href="#">WOOD PRODUCT</a></li>
-								<li><a href="#">RICE HUSK PRODUCT</a></li>
-								<li><a href="#">SUGAR CANE PRODUCT</a></li>
-								<li><a href="#">CHARCOAL PRODUCT</a></li>
-								<li><a href="#">UNDERGROUP PRODUCT</a></li>
+								<li><%= link_to "RICE HUSK PRODUCT", root_path(anchor: "products") %></li>
 							</ul>
 						</li>
 						<li class="menu__item"><%= link_to "Contact", root_path(anchor: "contact"), class: "menu__link" %></li>
