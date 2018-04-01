@@ -23447,3 +23447,132 @@ puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.3) lib/puma/server.rb:438:in `process_client'
 puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-01 23:45:43 +0700
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (147.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_about.html.erb (166.2ms)
+  [1m[36mProduct Load (40.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mImage Load (62.4ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" IN (1, 2, 3, 4, 5)[0m
+  Rendered collection of products/_product.html.erb [5 times] (1796.6ms)
+  Rendered home/_gallery.html.erb (3516.7ms)
+  Rendered home/_stat.html.erb (45.4ms)
+  Rendered home/_contact.html.erb (626.1ms)
+  Rendered home/index.html.erb within layouts/application (5708.3ms)
+  Rendered shared/_header.html.erb (478.9ms)
+  Rendered shared/_banner.html.erb (129.6ms)
+  Rendered shared/_footer.html.erb (73.8ms)
+Completed 200 OK in 25876ms (Views: 20603.3ms | ActiveRecord: 250.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 23:49:32 +0700
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (49.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_about.html.erb (17.4ms)
+  [1m[36mProduct Load (68.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mImage Load (34.7ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" IN (1, 2, 3, 4, 5)[0m
+  Rendered collection of products/_product.html.erb [5 times] (402.7ms)
+  Rendered home/_gallery.html.erb (966.5ms)
+  Rendered home/_stat.html.erb (22.7ms)
+  Rendered home/_contact.html.erb (189.8ms)
+  Rendered home/index.html.erb within layouts/application (1785.4ms)
+  Rendered shared/_header.html.erb (114.2ms)
+  Rendered shared/_banner.html.erb (47.4ms)
+  Rendered shared/_footer.html.erb (47.2ms)
+Completed 200 OK in 8477ms (Views: 7854.3ms | ActiveRecord: 152.1ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for 127.0.0.1 at 2018-04-01 23:54:35 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for 127.0.0.1 at 2018-04-01 23:54:40 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for 127.0.0.1 at 2018-04-01 23:54:44 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'

@@ -17,10 +17,16 @@
 				<div class="col-md-4 w3agile_footer_grid w3agile_footer_grid1">
 					<h3>Navigation</h3>
 					<ul>
-						<li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><%= link_to "Home", root_path %></li>
-						<li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><%= link_to "Product", root_path(anchor: "products") %></li>
-						<li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><%= link_to "About", root_path(anchor: "about") %></li>
-						<li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><%= link_to "Contact", root_path(anchor: "contact") %></li>
+						<li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><%= link_to "Home", root_path, "data-turbolinks": false %></li>
+						<li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+							<%= link_to "Product", root_path(anchor: "products"), "data-turbolinks": false %>
+						</li>
+						<li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+							<%= link_to "About", root_path(anchor: "about"), "data-turbolinks": false %>
+						</li>
+						<li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+							<%= link_to "Contact", root_path(anchor: "contact"), "data-turbolinks": false %>
+						</li>
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
