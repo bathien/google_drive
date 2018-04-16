@@ -23576,3 +23576,504 @@ puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.3) lib/puma/server.rb:438:in `process_client'
 puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-15 21:17:34 +0700
+  [1m[35m (72.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (6.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_about.html.erb (0.4ms)
+Started GET "/" for 127.0.0.1 at 2018-04-15 21:17:38 +0700
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_about.html.erb (0.3ms)
+  [1m[36mProduct Load (48.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mProduct Load (37.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mImage Load (50.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" IN (1, 2, 3, 4, 5)[0m
+  [1m[36mImage Load (50.6ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" IN (1, 2, 3, 4, 5)[0m
+  Rendered collection of products/_product.html.erb [5 times] (39.8ms)
+  Rendered home/_gallery.html.erb (271.8ms)
+  Rendered collection of products/_product.html.erb [5 times] (42.9ms)
+  Rendered home/_gallery.html.erb (261.1ms)
+  Rendered home/_stat.html.erb (0.4ms)
+  Rendered home/_stat.html.erb (1.4ms)
+  Rendered home/_contact.html.erb (43.2ms)
+  Rendered home/_contact.html.erb (41.2ms)
+  Rendered home/index.html.erb within layouts/application (3430.3ms)
+  Rendered home/index.html.erb within layouts/application (4595.5ms)
+  Rendered shared/_header.html.erb (4.4ms)
+  Rendered shared/_header.html.erb (3.8ms)
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_banner.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (1.3ms)
+Completed 200 OK in 4000ms (Views: 3772.8ms | ActiveRecord: 103.2ms)
+
+
+Completed 200 OK in 5209ms (Views: 4960.9ms | ActiveRecord: 145.3ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for 127.0.0.1 at 2018-04-15 21:17:43 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for 127.0.0.1 at 2018-04-15 21:17:44 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for 127.0.0.1 at 2018-04-15 21:17:44 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.5) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.5) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.5) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.5) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-16 06:13:52 +0700
+  [1m[35m (40.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+Completed 500 Internal Server Error in 835ms (ActiveRecord: 67.0ms)
+
+
+  
+LoadError (cannot load such file -- google/api_client):
+  
+app/jobs/visitor_count_job.rb:4:in `<class:VisitorCountJob>'
+app/jobs/visitor_count_job.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-04-16 06:15:54 +0700
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 11.7ms)
+
+
+  
+LoadError (cannot load such file -- google/api_client):
+  
+app/jobs/visitor_count_job.rb:4:in `<class:VisitorCountJob>'
+app/jobs/visitor_count_job.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-04-16 06:16:11 +0700
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+LoadError (cannot load such file -- google/api_client):
+  
+app/jobs/visitor_count_job.rb:4:in `<class:VisitorCountJob>'
+app/jobs/visitor_count_job.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-04-16 06:19:49 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+[ActiveJob] [VisitorCountJob] [4faa7862-890f-4777-b55a-db6a225382cc] Performing VisitorCountJob (Job ID: 4faa7862-890f-4777-b55a-db6a225382cc) from Async(default)
+[ActiveJob] Enqueued VisitorCountJob (Job ID: 4faa7862-890f-4777-b55a-db6a225382cc) to Async(default)
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_about.html.erb (0.6ms)
+[ActiveJob] [VisitorCountJob] [4faa7862-890f-4777-b55a-db6a225382cc] Error performing VisitorCountJob (Job ID: 4faa7862-890f-4777-b55a-db6a225382cc) from Async(default) in 1016.03ms: NameError (uninitialized constant VisitorCountJob::SCHEDULER):
+/home/bathien/Desktop/vovimit_app/app/jobs/visitor_count_job.rb:29:in `perform'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:37:in `block in perform_now'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/i18n-0.9.5/lib/i18n.rb:268:in `with_locale'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/notifications.rb:166:in `instrument'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:44:in `block in tag_logger'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:44:in `tag_logger'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:33:in `perform_now'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:22:in `block in execute'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/reloader.rb:68:in `block in wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/reloader.rb:67:in `wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:20:in `execute'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  [1m[36mProduct Load (167.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mImage Load (185.3ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" IN (1, 2, 3, 4, 5)[0m
+  Rendered collection of products/_product.html.erb [5 times] (14.7ms)
+  Rendered home/_gallery.html.erb (1202.3ms)
+  Rendered home/_stat.html.erb (0.7ms)
+  Rendered home/_contact.html.erb (474.1ms)
+  Rendered home/index.html.erb within layouts/application (21018.1ms)
+  Rendered shared/_header.html.erb (9.6ms)
+  Rendered shared/_banner.html.erb (3.8ms)
+  Rendered shared/_footer.html.erb (4.7ms)
+Completed 200 OK in 32745ms (Views: 30351.7ms | ActiveRecord: 380.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-16 06:37:08 +0700
+Started GET "/" for 127.0.0.1 at 2018-04-16 06:37:08 +0700
+  [1m[35m (93.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (88.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+[ActiveJob] Enqueued VisitorCountJob (Job ID: ebe55046-6a53-4c4e-9983-641b48df8a71) to Async(default)
+[ActiveJob] Enqueued VisitorCountJob (Job ID: db83c833-1eac-4456-9875-28527afe064b) to Async(default)
+[ActiveJob] [VisitorCountJob] [ebe55046-6a53-4c4e-9983-641b48df8a71] Performing VisitorCountJob (Job ID: ebe55046-6a53-4c4e-9983-641b48df8a71) from Async(default)
+[ActiveJob] [VisitorCountJob] [db83c833-1eac-4456-9875-28527afe064b] Performing VisitorCountJob (Job ID: db83c833-1eac-4456-9875-28527afe064b) from Async(default)
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_about.html.erb (1.8ms)
+  Rendered home/_about.html.erb (0.1ms)
+[ActiveJob] [VisitorCountJob] [db83c833-1eac-4456-9875-28527afe064b] Error performing VisitorCountJob (Job ID: db83c833-1eac-4456-9875-28527afe064b) from Async(default) in 1556.18ms: ArgumentError (interval is not a valid option):
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/retriable-3.1.1/lib/retriable/config.rb:34:in `block in initialize'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/retriable-3.1.1/lib/retriable/config.rb:33:in `each'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/retriable-3.1.1/lib/retriable/config.rb:33:in `initialize'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/retriable-3.1.1/lib/retriable.rb:26:in `new'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/retriable-3.1.1/lib/retriable.rb:26:in `retriable'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/google-api-client-0.7.1/lib/google/api_client.rb:595:in `execute!'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/google-api-client-0.7.1/lib/google/api_client.rb:330:in `discovery_document'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/google-api-client-0.7.1/lib/google/api_client.rb:375:in `discovered_api'
+/home/bathien/Desktop/vovimit_app/app/jobs/visitor_count_job.rb:32:in `perform'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:37:in `block in perform_now'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/i18n-0.9.5/lib/i18n.rb:268:in `with_locale'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/notifications.rb:166:in `instrument'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:44:in `block in tag_logger'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:44:in `tag_logger'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:33:in `perform_now'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:22:in `block in execute'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/reloader.rb:68:in `block in wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/reloader.rb:67:in `wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:20:in `execute'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+[ActiveJob] [VisitorCountJob] [ebe55046-6a53-4c4e-9983-641b48df8a71] Error performing VisitorCountJob (Job ID: ebe55046-6a53-4c4e-9983-641b48df8a71) from Async(default) in 1599.03ms: ArgumentError (interval is not a valid option):
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/retriable-3.1.1/lib/retriable/config.rb:34:in `block in initialize'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/retriable-3.1.1/lib/retriable/config.rb:33:in `each'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/retriable-3.1.1/lib/retriable/config.rb:33:in `initialize'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/retriable-3.1.1/lib/retriable.rb:26:in `new'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/retriable-3.1.1/lib/retriable.rb:26:in `retriable'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/google-api-client-0.7.1/lib/google/api_client.rb:595:in `execute!'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/google-api-client-0.7.1/lib/google/api_client.rb:330:in `discovery_document'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/google-api-client-0.7.1/lib/google/api_client.rb:375:in `discovered_api'
+/home/bathien/Desktop/vovimit_app/app/jobs/visitor_count_job.rb:32:in `perform'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:37:in `block in perform_now'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/i18n-0.9.5/lib/i18n.rb:268:in `with_locale'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/notifications.rb:166:in `instrument'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:44:in `block in tag_logger'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:44:in `tag_logger'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:33:in `perform_now'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:22:in `block in execute'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/reloader.rb:68:in `block in wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/reloader.rb:67:in `wrap'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.5/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/execution.rb:20:in `execute'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.5/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/bathien/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mImage Load (131.8ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" IN (1, 2, 3, 4, 5)[0m
+  [1m[36mImage Load (141.0ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" IN (1, 2, 3, 4, 5)[0m
+  Rendered collection of products/_product.html.erb [5 times] (23.7ms)
+  Rendered home/_gallery.html.erb (1137.3ms)
+  Rendered collection of products/_product.html.erb [5 times] (29.9ms)
+  Rendered home/_gallery.html.erb (1143.6ms)
+  Rendered home/_stat.html.erb (3.6ms)
+  Rendered home/_stat.html.erb (0.1ms)
+  Rendered home/_contact.html.erb (168.9ms)
+  Rendered home/index.html.erb within layouts/application (9603.5ms)
+  Rendered home/_contact.html.erb (161.1ms)
+  Rendered home/index.html.erb within layouts/application (9600.2ms)
+  Rendered shared/_header.html.erb (7.1ms)
+  Rendered shared/_header.html.erb (3.8ms)
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_banner.html.erb (0.1ms)
+  Rendered shared/_footer.html.erb (3.4ms)
+Completed 200 OK in 13861ms (Views: 12155.5ms | ActiveRecord: 165.7ms)
+
+
+  Rendered shared/_footer.html.erb (3.1ms)
+Completed 200 OK in 13900ms (Views: 12205.3ms | ActiveRecord: 140.5ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for 127.0.0.1 at 2018-04-16 06:37:36 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for 127.0.0.1 at 2018-04-16 06:37:41 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for 127.0.0.1 at 2018-04-16 06:37:41 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'

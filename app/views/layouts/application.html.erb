@@ -23,6 +23,10 @@
     </div>
     <%= yield %>
     <%= render "shared/footer" %>
+    <script type="text/javascript">
+      <%= render "shared/ga.js" %>
+    </script>
+    <%= render "shared/ga" %>
     <%= content_for :specific_page_js %>
   </body>
 </html>

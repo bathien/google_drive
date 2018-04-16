@@ -1,21 +1,12 @@
-class HomeController < ApplicationController
-  before_action :visitor, only: :index
+class VisitorCountJob < ActiveJob::Base
+  queue_as :default
 
-  def index
-    @products = Product.includes(:images).all
-    @categories = Category.second
-    @visitor_count = VisitorCountJob.perform_later
-  end
+  require "google/api_client"
+  require "date"
 
-  def contact
-    customer = {name: params[:name], email: params[:email], phone: params[:phone]}
-    ApplicationMailer.contact_me(params[:message], customer).deliver_now
-
-  end
-
-  private
-  def visitor
-     service_account_email = ENV["GOOGLE_SERVICE_EMAIL"]
+  def perform
+    # Update these to match your own apps credentials
+    service_account_email = ENV["GOOGLE_SERVICE_EMAIL"]
     key_file = Rails.root.join("key", "keyfile.p12") # File containing your private key
     key_secret = "notasecret" # Password to unlock private key
     profileID = ENV["PROFILE_ID"] # Analytics profile ID.
@@ -53,6 +44,9 @@ class HomeController < ApplicationController
       "metrics" => "ga:visitors",
       # "sort" => "ga:month"
     })
-    @visitor_count = visitCount.data.rows[0][0].to_i
+
+    # Update the dashboard
+    # Note the trailing to_i - See: https://github.com/Shopify/dashing/issues/33
+    visitCount.data.rows[0][0].to_i
   end
 end
